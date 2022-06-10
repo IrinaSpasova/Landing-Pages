@@ -187,7 +187,7 @@ header .container {
 
 .showcase-area .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: center;
 }
@@ -221,10 +221,8 @@ header .container {
 
 .person {
     position: absolute;
-    margin-top: 5px;
-    margin-left: 5px;
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     object-fit: cover;
   transform: translate(15%, 25px);
 }
@@ -271,7 +269,7 @@ header .container {
   position: absolute;
   z-index: 0;
   width: 500px;
-  bottom: -180px;
+  bottom: -110px;
   left: -15px;
   opacity: 0.1;
 }
