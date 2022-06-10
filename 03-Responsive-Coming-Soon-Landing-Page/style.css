@@ -42,7 +42,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px 7%; /*?????????*/
+    padding: 20px 7%; 
     background: var(--bg-light-primary);
     min-height: 100vh;
     gap: 15px;
@@ -70,6 +70,8 @@
 
 .container .content p{
     color: var(--text-dark-secondary);
+    letter-spacing: 1px;
+    line-height: 150%;
     padding: 15px 0;
 }
 
@@ -97,4 +99,129 @@
     background: var(--bg-light-secondary);
     color: var(--primary-hover);
     padding-top: 5px;
+}
+
+.container .content .btn{
+    display: inline-block;
+    padding: 8px 50px;
+    margin: 10px 0;
+    color: var(--text-light-primary);
+    background: var(--primary);
+    font-size: 1.5em;
+    border-radius: 8px;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    margin-bottom: 24px;
+    transition: .2s ease-in-out;
+}
+
+.container .content .btn:hover{
+    letter-spacing: 2px;
+    background: var(--primary-hover);
+}
+
+
+@media (max-width:500px){
+    .container{
+        padding: 30px;
+        display: inline-block; /* try adding display: inline-block; on those elements (that dont work) https://stackoverflow.com/questions/29702002/why-wont-my-margins-change-css */
+    }
+
+    .container .content .title{
+        font-size: 1.2em;
+    }
+    
+    .container .content{
+        font-size: 0.9em;
+        
+    }
+
+    .container .image img{
+        width: 50%;
+        margin-left: 8%;
+    }
+
+    .container .content .btn{
+       display: grid;
+       margin: auto;
+       text-align: center;
+       max-width: 80%;
+       margin-top: 10px;
+       margin-bottom: 12%;  
+    }
+
+    .container .content .count-down {
+        gap: 5px;
+    }
+   
+}
+
+@media (max-width:780px){
+    .container{
+        padding: 10px;
+        display: block; /* try adding display: inline-block; on those elements (that dont work) https://stackoverflow.com/questions/29702002/why-wont-my-margins-change-css */
+    }
+
+    .container .content .title{
+        font-size: 1.5em;
+    }
+    
+    .container .content{
+        font-size: 0.9em;
+        
+    }
+
+    .container .image img{
+        width: 80%;
+        margin: auto;
+    }
+
+    .container .content .btn{
+       display: grid;
+       margin: auto;
+       text-align: center;
+       max-width: 80%;
+       margin-top: 20px;
+       margin-bottom: 15%;  
+    }
+
+    .container .content .count-down {
+        gap: 15px;
+    }
+}
+
+@media (max-width:990px){
+    .container{
+        padding: 30px;
+        display: inline-block; /* try adding display: inline-block; on those elements (that dont work) https://stackoverflow.com/questions/29702002/why-wont-my-margins-change-css */
+    }
+
+    .container .content .title{
+        font-size: 2.5em;
+        margin: 20px 0;
+    }
+    
+    .container .content{
+        font-size: 1.2em;
+        
+    }
+
+    .container .image img{
+        width: 100%;
+        display: flex;
+        
+    }
+
+    .container .content .btn{
+       display: grid;
+       margin: auto;
+       text-align: center;
+       max-width: 80%;
+       margin-top: 5%;
+       margin-bottom: 10%;  
+    }
+
+    .container .content .count-down {
+        gap: 10px;
+    }
 }
