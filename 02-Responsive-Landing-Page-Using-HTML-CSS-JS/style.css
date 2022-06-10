@@ -187,7 +187,7 @@ header .container {
 
 .showcase-area .container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
 }
@@ -212,19 +212,19 @@ header .container {
 }
 
 .right{
-    position: relative;
-    width: 750px;
-    height: 750px;
-    padding-left: 120px;
-    overflow: hidden;
+  position: relative;
+  width: 750px;
+  height: 750px;
+  padding-left: 120px;
+  overflow: hidden;
 }
 
 .person {
-    position: absolute;
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-  transform: translate(15%, 25px);
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+transform: translate(15%, 25px);
 }
 
 .toggle-btn {
@@ -269,7 +269,7 @@ header .container {
   position: absolute;
   z-index: 0;
   width: 500px;
-  bottom: -110px;
+  bottom: -180px;
   left: -15px;
   opacity: 0.1;
 }
