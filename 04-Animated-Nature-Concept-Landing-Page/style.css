@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary: #AA71FF;
+    --primary-hover: #8C3EFF;
+    --primary-clicked: #C8A4FF;
+    --secondary: #FCA7E4;
+    --secondary-hover: #FA65D0;
+    --secondary-clicked: #FEE9F8;
+    --green: #62D26F;
+    --yellow: #FFDD2B;
+    --orange: #FD612C;
+    --blue: #7A71F6;
+    --red: #E8384F;
+    --text-dark-primary: #151918;
+    --text-dark-secondary: #2c3432;
+    --text-light-primary: #fcfcfc;
+    --text-light-secondary: #d7dddc;
+    --grey-primary: #8d9f9b;
+    --grey-light: #a9b6b3;
+    --grey-dark: #4b5956;
+    --bg-dark-primary: #05000b;
+    --bg-dark-secondary: #19003e;
+    --bg-light-primary: #fbf9ff;
+    --bg-light-secondary: #f1e8ff;
+}
+
+body {
+    background: var(--bg-light-primary);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px;
+}
+
+header .logo {
+    font-size: 1.8em;
+    color: var(--primary);
+    padding-left: 25px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+/*TODO change moving https://stackoverflow.com/questions/54440571/keep-width-when-using-letter-spacing-on-hover*/
+header nav ul li {
+    margin: 0 20px;
+    animation: navLink .9s linear backwards;
+    animation-delay: calc(.9s * var(--i));
+}
+
+header nav ul li a {
+    font-size: 1.3em;
+    color: var(--grey-dark);
+    transition: letter-spacing .4s ease-in-out;
+    width: 7rem;
+    /* with and display keep from moving the nav   https://stackoverflow.com/questions/69238723/letter-spacing-moving-other-divs-when-hovering */
+    display: block;
+    text-align: center;
+}
+
+header nav ul li a:hover {
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+header nav ul li:last-child a {
+    padding: 7px 10px;
+    background: var(--primary);
+    color: var(--text-light-primary);
+    border-radius: 8px;
+    text-align: center;
+    /* this is important if we want letter spacing to start from center */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+header nav ul li:last-child a:hover {
+    background: var(--primary-hover);
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 40px;
+}
+
+.container .image {
+    margin-top: 50px;
+}
+
+.container .image img {
+    width: 50vw;
+}
+
+figcaption a {
+    font-size: 0.8em;
+    margin-top: -100;
+    text-align: right;
+}
+
+figcaption a pre {
+    max-width: 97%;
+}
+
+.container .content {
+    /*margin-top: -50px;*/
+    padding-left: 100px;
+    line-height: 1.5;
+}
+
+.container .content h1 {
+    color: var(--primary);
+    font-size: 5em;
+    font-weight: 800;
+    animation: fadeIn 1s linear backwards;
+}
+
+.container .content h3 {
+    color: var(--primary-hover);
+    font-size: 2em;
+    font-weight: 300;
+    animation: fadeIn 1s linear backwards;
+    animation-delay: 1s;
+}
+
+.container .content p {
+    color: var(--grey-dark);
+    font-size: 1em;
+    animation: fadeIn 1s linear backwards;
+    animation-delay: 2s;
+}
+
+.container .content button {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    color: var(--text-light-primary);
+    background-color: var(--primary);
+    font-size: 1em;
+    height: 40px;
+    width: 180px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    animation: fadeIn 1s linear backwards;
+    animation-delay: 4s;
+}
+
+.container .content button:hover {
+    background: var(--primary-hover);
+    letter-spacing: 2px;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-150px) scale(0) rotate(45deg);
+        transform-origin: left;
+    }
+
+    100% {
+        transform: translateY(0px) scale(1) rotate(0deg);
+        transform-origin: left;
+    }
+}
+
+@keyframes navLink {
+    0% {
+        transform: translateY(-50px) scale(0) rotate(-45deg);
+    }
+}
+
+@media (max-width:1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 150px;
+        max-width: 80%;
+        padding: 0 auto;
+    }
+
+    .container .image img {
+        min-width: 80vw;
+        margin-left: 15%;
+    }
+
+    header {
+        background-color: var(--bg-light-primary);
+        z-index: 2000;
+    }
+
+    .container .content h1 {
+        color: var(--primary);
+        font-size: 3em;
+
+    }
+
+    .container .content h3 {
+        color: var(--primary-hover);
+        font-size: 1em;
+        font-weight: 300;
+    }
+
+    .container .content p {
+        color: var(--grey-dark);
+        font-size: 0.8em;
+
+    }
+
+    header nav ul li a {
+        font-size: 1em;
+        width: 3.4rem;
+    }
+
+    header nav ul li:last-child a {
+        padding: 4;
+        font-size: 0.8em;
+    }
+
+    header .logo {
+        font-size: 1.2em;
+        padding-left: 5px;
+    }
+}
+
+@media (max-width:600px) {
+    .container{
+        margin-top: 100px;
+    }
+    .container .content {
+        margin-bottom: -20px !important;
+    }
+
+    .container .image img {
+        min-width: 100vw;
+    }
+}
