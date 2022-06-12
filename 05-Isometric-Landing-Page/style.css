@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+body {
+    background: var(--bg-light-primary);
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+:root {
+    --primary: #AA71FF;
+    --primary-hover: #8C3EFF;
+    --primary-clicked: #C8A4FF;
+    --secondary: #FCA7E4;
+    --secondary-hover: #FA65D0;
+    --secondary-clicked: #FEE9F8;
+    --green: #62D26F;
+    --yellow: #FFDD2B;
+    --orange: #FD612C;
+    --blue: #7A71F6;
+    --red: #E8384F;
+    --text-dark-primary: #151918;
+    --text-dark-secondary: #2c3432;
+    --text-light-primary: #fcfcfc;
+    --text-light-secondary: #d7dddc;
+    --grey-primary: #8d9f9b;
+    --grey-light: #a9b6b3;
+    --grey-dark: #4b5956;
+    --bg-dark-primary: #05000b;
+    --bg-dark-secondary: #19003e;
+    --bg-light-primary: #fbf9ff;
+    --bg-light-secondary: #f1e8ff;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem 5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    z-index: 1000;
+}
+
+.fa-shopping-cart {
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    font-size: 2rem;
+    color: var(--grey-dark);
+    font-weight: 300;
+    padding: .5rem 2rem;
+    border-radius: 0.8rem;
+    transition: .2s linear;
+    /* display: block;  */
+}
+
+nav ul li a:hover {
+    color: var(--text-light-primary);
+    /*border-bottom: 2px solid var(--primary-hover);  need border-radius: 0.8rem; above for this effect*/
+    background: var(--primary);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    font-weight: 500;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    display: inline;
+    color: var(--primary);
+}
+
+.logo .fa-atom {
+    font-size: 2rem;
+    padding-left: 0.5rem;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content {
+    color: var(--grey-dark);
+    width: 40vw;
+    padding-top: 10rem;
+    font-style: italic;
+}
+
+.content h1 {
+    color: var(--primary);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5.5rem;
+}
+
+.content p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.buttons button {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: var(--text-light-primary);
+    height: 4em;
+    width: 15em;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    transition: .5s linear;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+#first {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
+    background: none;
+    color: var(--primary);
+    /* https://www.delftstack.com/howto/css/css-inner-border/*/
+
+}
+
+#first:hover {
+    background-color: var(--primary);
+    color: var(--text-light-primary);
+}
+
+#second {
+    margin-left: 32px;
+}
+
+#second:hover {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
+    background: none;
+    color: var(--primary);
+}
+
+.icons {
+    padding-top: 15rem;
+    font-size: 3rem;
+}
+
+.fab {
+    color: var(--primary);
+    font-size: 3rem;
+    margin-right: 8px;
+    padding: 5px;
+    text-align: center;
+    transition: .5s linear;
+}
+
+.fab:hover {
+    color: var(--text-light-primary);
+    background: var(--primary);
+}
+
+.image {
+    margin-top: 5rem;
+}
+
+.image img {
+    width: 50vw;
+    animation: image 1s linear;
+}
+
+@keyframes image {
+    0% {
+        transform: translateY(-5rem);
+        opacity: 0;
+    }
+}
+
+@media (max-width:1024px) {
+    .content h1 {
+        font-size: 3.5rem;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+    }
+
+    .buttons {
+        display: grid;
+        row-gap: 20px;
+    }
+
+    .buttons button {
+        height: 3em;
+        width: 10em;
+    }
+
+    #second {
+        margin-left: 0px;
+    }
+
+}
+
+@media (max-width:700px) {
+
+    nav ul li a {
+        font-size: 1rem;
+        color: var(--grey-dark);
+        font-weight: 400;
+        padding: .5rem 0.5rem;
+    }
+
+    .fa-shopping-cart,
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        display: grid;
+    }
+
+    .content {
+        width: 80vw;
+        margin-top: 10rem;
+    }
+
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+
+    .buttons {
+        display: grid;
+        row-gap: 20px;
+    }
+
+    .buttons button {
+        height: 3em;
+        width: 10em;
+    }
+
+    #second {
+        margin-left: 0px;
+    }
+
+    .image img {
+        display: none;
+    }
+
+}

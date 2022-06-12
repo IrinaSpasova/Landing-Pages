@@ -198,7 +198,7 @@ figcaption a pre {
     .container {
         display: grid;
         grid-template-columns: auto;
-        margin-top: 150px;
+        margin-top: 120px;
         max-width: 80%;
         padding: 0 auto;
     }
@@ -249,7 +249,7 @@ figcaption a pre {
 
 @media (max-width:600px) {
     .container{
-        margin-top: 100px;
+        margin-top: 80px;
     }
     .container .content {
         margin-bottom: -20px !important;
