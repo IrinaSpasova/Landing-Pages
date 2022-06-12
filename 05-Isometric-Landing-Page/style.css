@@ -205,6 +205,12 @@ nav ul li a:hover {
 }
 
 @media (max-width:1024px) {
+    .container{
+        min-height: 80vh;
+    }
+    .content{
+        padding: 10rem 1%;
+    }
     .content h1 {
         font-size: 3.5rem;
     }
@@ -212,6 +218,11 @@ nav ul li a:hover {
     .content p {
         font-size: 1.2rem;
         margin: 20px 0;
+    }
+
+    .image{
+        margin-top: -20rem;
+        max-width: 50vw;
     }
 
     .buttons {
@@ -226,6 +237,11 @@ nav ul li a:hover {
 
     #second {
         margin-left: 0px;
+    }
+
+    .icons {
+        padding-top: 10rem;
+        font-size: 3rem;
     }
 
 }
@@ -249,8 +265,8 @@ nav ul li a:hover {
     }
 
     .content {
-        width: 80vw;
-        margin-top: 10rem;
+        width: 100vw;
+        margin-top: 14rem;
     }
 
     .content h1 {
