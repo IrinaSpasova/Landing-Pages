@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="#" class="logo">bouquet</a>
+
+        <nav class="navbar">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">category</a>
+            <a href="#">products</a>
+            <a href="#">blog</a>
+        </nav>
+
+    </header>
+
+    <section class="container">
+        <div class="content">
+            <h3> new bouquet everyday</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste ipsum odio deleniti amet soluta
+                commodi laudantium, debitis temporibus placeat ducimus?</p>
+            <a href="#" class="btn">add to card</a>
+        </div>
+
+        <div class="image">
+            <img class="bouquet active" src="1.png" alt="">
+            <img class="bouquet" src="2.png" alt="">
+            <img class="bouquet" src="3.png" alt="">
+            <!-- 
+            <div class="left" onclick="preview()"> &lt; </div>
+            <div class="right" onclick="next()"> &gt; </div>
+            -->
+        </div>
+       
+        <div class="left" onclick="preview()"> &lt; </div>
+        <div class="right" onclick="next()"> &gt; </div>
+
+
+    </section>
+
+
+    <script>
+        let bouquet = document.querySelectorAll('.bouquet');
+        let index = 0;
+
+        function next() {
+            bouquet[index].classList.remove('active');
+            index = (index + 1) % bouquet.length;
+            bouquet[index].classList.add('active');
+        }
+
+        function preview() {
+            bouquet[index].classList.remove('active');
+            index = (index - 1 + bouquet.length) % bouquet.length;
+            bouquet[index].classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
